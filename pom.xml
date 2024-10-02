@@ -29,7 +29,6 @@
             </plugins>
         </pluginManagement>
 
-        <!-- TODO enable for dev mode
         <plugins>
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
@@ -37,6 +36,5 @@
                 <version>3.10.3</version>
             </plugin>
         </plugins>
-        -->
     </build>
 </project>
