@@ -25,3 +25,9 @@ replay_pid*
 
 # Local environment settings
 .envrc
+
+# maven output directory
+target/
+
+# vs code configuration
+.vscode

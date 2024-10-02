@@ -1,0 +1,10 @@
+<server>
+
+    <featureManager>
+        <feature>pages-3.1</feature>
+    </featureManager>
+
+    <httpEndpoint host="*" httpPort="${http.port}"
+        httpsPort="${https.port}" id="defaultHttpEndpoint" />
+
+</server>
