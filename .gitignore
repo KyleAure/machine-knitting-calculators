@@ -27,7 +27,10 @@ replay_pid*
 .envrc
 
 # maven output directory
-target/
+*/target/**
 
 # vs code configuration
 .vscode
+
+# Mac OS files
+.DS_Store
