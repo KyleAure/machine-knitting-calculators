@@ -12,43 +12,34 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.kyleaure.knitting</groupId>
-    <artifactId>user-interface</artifactId>
-    <packaging>war</packaging>
-    <version>${project.parent.version}</version>
-
-    <!--
-    <url>TODO</url>
-    -->
+    <artifactId>util</artifactId>
+    <packaging>jar</packaging>
+    <version>0.1.0-SNAPSHOT</version>
     
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
-
-        <liberty.var.http.port>9080</liberty.var.http.port>
-        <liberty.var.https.port>9443</liberty.var.https.port>
     </properties>
 
     <dependencies>
-        <!-- Provided dependencies -->
         <dependency>
-            <groupId>jakarta.platform</groupId>
-            <artifactId>jakarta.jakartaee-api</artifactId>
-            <version>10.0.0</version>
-            <scope>provided</scope>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.11.1</version>
+            <scope>test</scope>
         </dependency>
-
-        <!-- Dependencies to include -->
-        <dependency>
-            <groupId>io.kyleaure.knitting</groupId>
-            <artifactId>util</artifactId>
-            <version>${project.parent.version}</version>
-        </dependency>
-
     </dependencies>
 
-    <!-- TODO unit and integration testing -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.0</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
