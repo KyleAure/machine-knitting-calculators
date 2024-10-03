@@ -10,10 +10,14 @@ public class MeasureTest {
     @Test
     public void testZero() {
         Measure m1 = Measure.of(0, Unit.CENTIMETER);
+
+        // Assert conversions
         assertEquals(0.0, m1.to(Unit.CENTIMETER));
         assertEquals(0.0, m1.to(Unit.INCH));
 
         Measure m2 = Measure.of(0, Unit.INCH);
+
+        // Assert conversions
         assertEquals(0.0, m2.to(Unit.CENTIMETER));
         assertEquals(0.0, m2.to(Unit.INCH));
     }
@@ -21,10 +25,14 @@ public class MeasureTest {
     @Test
     public void testSingle() {
         Measure m1 = Measure.of(1, Unit.CENTIMETER);
+
+        // Assert conversions
         assertEquals(1.0, m1.to(Unit.CENTIMETER));
-        assertEquals(0.39370078740157477, m1.to(Unit.INCH));
+        assertEquals(0.3937008, m1.to(Unit.INCH));
 
         Measure m2 = Measure.of(1, Unit.INCH);
+
+        // Assert conversions
         assertEquals(2.54, m2.to(Unit.CENTIMETER));
         assertEquals(1.0, m2.to(Unit.INCH));
     }
@@ -37,8 +45,9 @@ public class MeasureTest {
         assertEquals(1.0, m1.to(Unit.INCH));
 
         //using factional representation
-        Measure m2 = Measure.of(1/3, Unit.INCH);
-        assertEquals(1/7.62, m2.to(Unit.CENTIMETER));
-        assertEquals(1/3, m2.to(Unit.INCH));
+        Measure m2 = Measure.of(1, 3, Unit.INCH);
+        
+        assertEquals(0.8466667, m2.to(Unit.CENTIMETER));
+        assertEquals(0.3333333, m2.to(Unit.INCH));
     }
 }
